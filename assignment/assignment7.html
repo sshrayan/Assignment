@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Example</title>
+  <script>
+    window.onload = function() {
+    
+      document.addEventListener('click', function(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert('Clicked at coordinates: (' + x + ', ' + y + ')');
+      });
+
+  
+      document.addEventListener('keydown', function(event) {
+        const keyCode = event.keyCode;
+        alert('Key pressed with code: ' + keyCode);
+      });
+
+      
+      const image = document.getElementById('myImage');
+      image.addEventListener('mouseover', function() {
+        image.src = 'test.png'; 
+      });
+    };
+  </script>
+</head>
+<body>
+  <h1>Event Example</h1>
+  <img id="myImage" src="download.png" alt="Original Image">
+</body>
+</html>
